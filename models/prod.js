@@ -5,9 +5,9 @@ const sequelize = new Sequelize(process.env.USER_DB,process.env.BANC_DB,process.
   dialect:'mysql',
   dialectModule: require('mysql2')
 });
-module.exports = (sequelize, DataTypes) => {
+module.exports = ( DataTypes) => {
   const Prod = sequelize.define('Prod',{
-    nome:DataTypes.STRING
+    nome:{type:Sequelize.STRING}
   })
   return Prod;
 };
