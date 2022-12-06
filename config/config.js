@@ -1,10 +1,14 @@
+const fs = require('fs');
+require('dotenv').config()
+module.exports =
 {
   "development": {
-    "username": "",
-    "password": "",
-    "database": "",
-    "host": "",
-    "dialect": "mysql"
+    "username": process.env.USER_DB,
+    "password": process.env.PASSWORD_DB,
+    "database": process.env.BANC_DB,
+    "host": process.env.HOST_DB,
+    "dialect": "mysql",
+    dialectModule: require('mysql2')
   },
   "test": {
     "username": "root",
