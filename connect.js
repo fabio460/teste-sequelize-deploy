@@ -6,4 +6,5 @@ const sequelize = new Sequelize('banco-teste', 'root', 'root', {
 });
 
 
+
 module.exports = {sequelize,Sequelize,DataTypes}
