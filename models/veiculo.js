@@ -2,7 +2,7 @@
 const {
   Model
 } = require('sequelize');
-const {Usuario} = require('../models')
+
 module.exports = (sequelize, DataTypes) => {
   class Veiculo extends Model {
     static associate(models) {
