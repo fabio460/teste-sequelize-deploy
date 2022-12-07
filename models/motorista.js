@@ -1,21 +1,15 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class motorista extends Model {
-    static associate(models) {
-      motorista.hasMany(models.Veiculo,{
-        foreignKey:'id_motorista',
-        onDelete:'CASCADE'
-      })
+const {DataTypes,Sequelize,sequelize} = require('../connect')
+
+module.exports = 
+ sequelize.define('motorista',{
+    nome:{
+      type:Sequelize.STRING
     }
-  }
-  motorista.init({
-    nome: DataTypes.STRING
-  }, {
-    sequelize,
-    modelName: 'motorista',
-  });
-  return motorista;
-};
+  })  
+  // motorista.hasMany(models.Veiculo,{
+  //   foreignKey:'id_motorista',
+  //   onDelete:'CASCADE'
+  // })
+
+
+

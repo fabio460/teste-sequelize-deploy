@@ -1,6 +1,6 @@
 const express = require('express')
 require('dotenv').config()
-const {motorista} = require('./models')
+const motorista = require('./models/motorista')
 
 
 const app = express()
