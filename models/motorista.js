@@ -1,15 +1,16 @@
 const {DataTypes,Sequelize,sequelize} = require('../connect')
-
-module.exports = 
- sequelize.define('motorista',{
+const Veiculo = require('./veiculo')
+  var motorista =  sequelize.define('motorista',{
     nome:{
       type:Sequelize.STRING
     }
   })  
-  // motorista.hasMany(models.Veiculo,{
+  // motorista.hasMany(Veiculo,{
   //   foreignKey:'id_motorista',
   //   onDelete:'CASCADE'
   // })
+  
+module.exports = motorista
 
 
 

@@ -6,6 +6,7 @@ const motorista = require('./models/motorista')
 const app = express()
 app.use(express.json())
 app.get('/',async(req,res)=>{
+    
     const p = await motorista.findAll()
     res.send(p)
 })
