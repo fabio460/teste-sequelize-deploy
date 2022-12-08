@@ -8,7 +8,7 @@ module.exports =
     database: process.env.BANC_DB,
     host: process.env.HOST_DB,
     dialect: "mysql",
-    dialectModule: require('mysql2')
+
   },
   "test": {
     "username": "root",

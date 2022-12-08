@@ -5,19 +5,16 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.sequelize.transaction(t => {
       return Promise.all([
-        queryInterface.changeColumn('veiculos', 'id_motorista', {
-          type: Sequelize.DataTypes.STRING,
-          onDelete:'CASCADE'
+        queryInterface.addColumn('Veiculos', 'id_motorista', {
+          type: Sequelize.DataTypes.STRING
         }, { transaction: t }),
-      
       ]);
     });
   },
   down: (queryInterface, Sequelize) => {
     return queryInterface.sequelize.transaction(t => {
       return Promise.all([
-        queryInterface.changeColumn('veiculos', 'id_motorista', { transaction: t }),
-   
+        queryInterface.removeColumn('Veiculos', 'id_motorista', { transaction: t }),
       ]);
     });
   }
